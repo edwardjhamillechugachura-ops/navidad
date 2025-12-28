@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #020111, #191970);
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+.estrellas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.estrellas::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: mover 60s linear infinite;
+    opacity: 0.8;
+}
+@keyframes mover {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 1000px; }
+}
+.contenedor {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+h1 { font-size: 3em; color: #ffccff; }
+h2 { color: #ffd700; }
+.romance { font-style: italic; color: #ffb6c1; }
+button {
+    background: #ff3366;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+}
+button:hover { background: #ff6699; }
+.luna {
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    font-size: 80px;
+}
